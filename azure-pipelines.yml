@@ -10,7 +10,7 @@ steps:
   inputs:
     versionSpec: '11'          # Specify JDK 11
     jdkArchitectureOption: 'x64'     # Architecture: 64-bit
-    jdkSourceOption: 'LocalDirectory'
+    jdkSourceOption: 'AzureStorage'
 
 # Print the Java version to verify the installation
 - task: CmdLine@2
