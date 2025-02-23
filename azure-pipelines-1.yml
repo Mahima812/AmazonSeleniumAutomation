@@ -20,3 +20,17 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
+- task: Maven@4
+  inputs:
+    azureSubscription: 'Free Trial(48f48c34-552f-4916-86b0-6bb67e6d1017)'
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'
+    mavenVersionOption: 'Path'
+    mavenDirectory: 'C:\Program Files\Apache\Maven\apache-maven-3.9.9'
+    mavenSetM2Home: false
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
