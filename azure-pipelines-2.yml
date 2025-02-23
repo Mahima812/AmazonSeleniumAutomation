@@ -6,11 +6,11 @@ pool:
 
 steps:
 # Install JDK 11 using Java Tool Installer (optional if JDK is installed globally)
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '11'  # Specify JDK version
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'LocalDirectory'  # Use local JDK if already installed
+# - task: JavaToolInstaller@0
+#   inputs:
+#     versionSpec: '11'  # Specify JDK version
+#     jdkArchitectureOption: 'x64'
+#     jdkSourceOption: 'LocalDirectory'  # Use local JDK if already installed
 
 
 # Verify Java and Maven versions
