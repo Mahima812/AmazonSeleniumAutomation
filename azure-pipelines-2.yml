@@ -1,0 +1,34 @@
+trigger:
+- main  # Define the branch to trigger the pipeline
+
+pool:
+  name: 'SelfHostedPool'  # Use your self-hosted agent pool name
+
+steps:
+# Install JDK 11 using Java Tool Installer (optional if JDK is installed globally)
+- task: JavaToolInstaller@0
+  inputs:
+    versionSpec: '11'  # Specify JDK version
+    jdkArchitectureOption: 'x64'
+    jdkSourceOption: 'LocalDirectory'  # Use local JDK if already installed
+
+
+# Verify Java and Maven versions
+- task: CmdLine@2
+  inputs:
+    script: |
+      java -version
+      mvn -version
+
+# Run Maven build (with Selenium tests)
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'pom.xml'
+    mavenOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    goals: 'test'  # Run tests
+
+# Optionally, add steps to publish test results, deploy artifacts, etc.
