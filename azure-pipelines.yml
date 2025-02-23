@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  name: 'Default'  # Or your custom agent pool
+  name: 'SelfHosted'  # Or your custom agent pool
 
 steps:
 # Install JDK 11 using Java Tool Installer
