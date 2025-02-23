@@ -14,11 +14,11 @@ steps:
 
 
 # Verify Java and Maven versions
-- task: CmdLine@2
-  inputs:
-    script: |
-      java -version
-      mvn -version
+# - task: CmdLine@2
+#   inputs:
+#     script: |
+#       java -version
+#       mvn -version
 
 # Run Maven build (with Selenium tests)
 - task: Maven@4
@@ -26,10 +26,10 @@ steps:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
     javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.11'
+    jdkVersionOption: 'default'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'test'  # Run tests
+    goals: 'clean test'  # Run tests
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)'
