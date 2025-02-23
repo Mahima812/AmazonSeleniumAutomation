@@ -2,7 +2,7 @@ trigger:
 - main  # Define the branch to trigger the pipeline
 
 pool:
-  name: 'SelfHostedPool'  # Use your self-hosted agent pool name
+  name: 'SelfHostedPool2'  # Use your self-hosted agent pool name
 
 steps:
 # Install JDK 11 using Java Tool Installer (optional if JDK is installed globally)
