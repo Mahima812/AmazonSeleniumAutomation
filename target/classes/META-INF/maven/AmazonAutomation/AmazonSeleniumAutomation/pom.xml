@@ -46,6 +46,7 @@
     	<artifactId>SeleniumAutomation</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
     </dependency-->
+   
     
     <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 <dependency>
@@ -73,13 +74,6 @@
 
     </dependencies>
   
-
-<repositories>
-  <repository>
-    <id>my-repo</id>
-    <url>http://repository-url</url>
-  </repository>
-</repositories>
 
   <build>
     <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
