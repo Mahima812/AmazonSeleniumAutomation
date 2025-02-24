@@ -38,11 +38,12 @@
     <version>5.6.3</version>
 </dependency>
     
-    <dependency>
+    <!-- Commenting Dependency -->
+    <!--dependency>
     	<groupId>SeleniumAutomation</groupId>
     	<artifactId>SeleniumAutomation</artifactId>
     	<version>0.0.1-SNAPSHOT</version>
-    </dependency>
+    </dependency-->
     
     <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 <dependency>
