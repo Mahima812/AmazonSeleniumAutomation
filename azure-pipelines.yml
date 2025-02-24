@@ -6,11 +6,11 @@ pool:
 
 steps:
 # Install JDK 11 using Java Tool Installer
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '11'          # Specify JDK 11
-    jdkArchitectureOption: 'x64'     # Architecture: 64-bit
-    jdkSourceOption: 'LocalDirectory'
+# - task: JavaToolInstaller@0
+#   inputs:
+#     versionSpec: '11'          # Specify JDK 11
+#     jdkArchitectureOption: 'x64'     # Architecture: 64-bit
+#     jdkSourceOption: 'LocalDirectory'
 
 # Print the Java version to verify the installation
 - task: CmdLine@2
